@@ -1,0 +1,3222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二爷的慕淘网</title>
+	<link rel="stylesheet" type="text/css" href="work5.1.css">
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+	<script type="text/javascript" src="work5.1.js"></script>
+</head>
+<body>
+
+	<!-- 蒙版 -->
+    <div class="mask"></div>
+	<!-- 登录界面 -->
+    <div class="login">
+    	<span class="login_in lr_active">登录</span>
+    	<span class="rege_in">注册</span>
+    	<span class="close">×</span>
+    	<br/><br/>
+    	<input type="text" name="logname" placeholder="请输入登录邮箱/手机号">
+    	<div class="logname_prove"></div>
+    	<input type="password" name="password" placeholder="6-16位密码，区分大小写，不能用空格">
+    	<div class="password_prove"></div>
+        <span><input type="radio" name="" id="log_auto"></span>
+        <span id="auto_text">下次自动登录</span>
+        <a href="#" id="forget">忘记密码</a>
+        <br/>
+        <button class="lr_btn" id="l_btn">登录</button>
+        <br/>
+        <span class="lr_img wb"><img src="icon/xinlang.png"></span>
+        <span class="lr_img wx"><img src="icon/weixin.png"></span>
+        <span class="lr_img qq"><img src="icon/QQ.png"></span>
+    </div>
+	<!-- 注册界面 -->
+    <div class="rege">
+    	<span class="login_in">登录</span>
+    	<span class="rege_in lr_active">注册</span>
+    	<span class="close">×</span>
+    	<br/><br/>
+    	<input type="text" name="regename" placeholder="请输入注册邮箱/手机号">
+    	<div class="regename_prove"></div>
+    	<input type="password" name="prove" placeholder="请输入验证码" class="prove">
+    	<img src="verify.png" id="verify">
+    	<div class="prove_prove"></div>
+        <button class="lr_btn" id="r_btn">登录</button>
+        <br/>
+        <span class="lr_img wb"><img src="icon/xinlang.png"></span>
+        <span class="lr_img wx"><img src="icon/weixin.png"></span>
+        <span class="lr_img qq"><img src="icon/QQ.png"></span>
+    </div>
+	<div class="main">
+    <!-- 顶部 -->
+    <div class="top">
+	    <!-- head -->
+	    <div class="head">
+	    	<!-- head左 -->
+	    	<div class="head_left">
+	    		<a name="top"></a>
+	    		<a href="#" style="color:red" id="log">亲，请登录&nbsp;&nbsp;</a>
+	    		<a href="#" id="rege">免费注册&nbsp;&nbsp;</a>
+	    		<a href="https://www.taobao.com/">淘宝网</a>
+	    	</div>
+	    	<div class="head_right">
+	    		
+	    			<ul id="hr_ul1">
+	    				<li class="hr_title">
+	    				我的慕淘
+	    				<img src="icon/21.png">
+	    			    </li>
+	    				<li>已买到的宝贝</li>
+	    				<li>我的足迹</li>
+	    			</ul>
+
+	    			<ul id="hr_ul2">
+	    				<li class="hr_title">
+	    				我的收藏
+	    				<img src="icon/21.png">
+	    			    </li>
+	    				<li>收藏的宝贝</li>
+	    				<li>收藏的店铺</li>
+	    			</ul>
+
+	    			<span class="hr_kind">商品分类</span>
+
+	    			<ul id="hr_ul3">
+	    				<li class="hr_title">
+	    				卖家中心
+	    				<img src="icon/21.png">
+	    			    </li>
+	    				<li>免费开店</li>
+	    				<li>已卖出宝贝</li>
+	    				<li>出售中宝贝</li>
+	    				<li>卖家服务</li>
+	    				<li>培训中心</li>
+	    				<li>体验中心</li>
+	    			</ul>
+
+	    			<ul id="hr_ul4">
+	    				<li class="hr_title">
+	    				联系客服
+	    				<img src="icon/21.png">
+	    			    </li>
+	    				<li>消费者客服</li>
+	    				<li>卖家客服</li>
+	    			</ul>
+	    		
+	    	</div>
+
+	    </div>
+
+		<!-- logo -->
+		<div class="logo">
+
+			<div class="logo_logo"><img src="logo.png" ></div>
+
+		    <input type="" name="" placeholder="灵魂美食一元抢">
+			<button class="btn">搜索</button>
+            <!-- 购物车 -->
+			<div class="logo_car">
+				<img src="icon/26.png" class="smcar">
+				<p>购物车</p>
+				<p>|</p>
+				<p>13</p>
+				<span id="lgc_down"><img src="icon/23.png" class="down"></span>
+			</div>
+			<!-- 购物车内部 -->
+			<div class="car_inner">
+				<div class="car_title">最新加入的商品</div>
+				<div class="car_list">
+					<div class="car_box">
+						<span class="cart_img"><img src="cart/1.png"></span>
+						<span class="cart_text">品味，高端大气上档次<br/>￥9999元</span>
+						<span class="cart_close">×</span>
+					</div>
+					<div class="car_box">
+						<span class="cart_img"><img src="cart/2.png"></span>
+						<span class="cart_text">品味，高端大气上档次<br/>￥9999元</span>
+						<span class="cart_close">×</span>
+					</div>
+					<div class="car_box">
+						<span class="cart_img"><img src="cart/3.png"></span>
+						<span class="cart_text">品味，高端大气上档次<br/>￥9999元</span>
+						<span class="cart_close">×</span>
+					</div>
+					<div class="car_box">
+						<span class="cart_img"><img src="cart/4.png"></span>
+						<span class="cart_text">品味，高端大气上档次<br/>￥9999元</span>
+						<span class="cart_close">×</span>
+					</div>
+					<div class="car_box">
+						<span class="cart_img"><img src="cart/5.png"></span>
+						<span class="cart_text">品味，高端大气上档次<br/>￥9999元</span>
+						<span class="cart_close">×</span>
+					</div>
+					<div class="car_box">
+						<span class="cart_img"><img src="cart/1.png"></span>
+						<span class="cart_text">品味，高端大气上档次<br/>￥9999元</span>
+						<span class="cart_close">×</span>
+					</div>
+					<div class="car_box">
+						<span class="cart_img"><img src="cart/2.png"></span>
+						<span class="cart_text">品味，高端大气上档次<br/>￥9999元</span>
+						<span class="cart_close">×</span>
+					</div>
+					<div class="car_box">
+						<span class="cart_img"><img src="cart/3.png"></span>
+						<span class="cart_text">品味，高端大气上档次<br/>￥9999元</span>
+						<span class="cart_close">×</span>
+					</div>
+					<div class="car_box">
+						<span class="cart_img"><img src="cart/4.png"></span>
+						<span class="cart_text">品味，高端大气上档次<br/>￥9999元</span>
+						<span class="cart_close">×</span>
+					</div>
+					<div class="car_box">
+						<span class="cart_img"><img src="cart/5.png"></span>
+						<span class="cart_text">品味，高端大气上档次<br/>￥9999元</span>
+						<span class="cart_close">×</span>
+					</div>
+					<div class="car_box">
+						<span class="cart_img"><img src="cart/1.png"></span>
+						<span class="cart_text">品味，高端大气上档次<br/>￥9999元</span>
+						<span class="cart_close">×</span>
+					</div>
+					<div class="car_box">
+						<span class="cart_img"><img src="cart/2.png"></span>
+						<span class="cart_text">品味，高端大气上档次<br/>￥9999元</span>
+						<span class="cart_close">×</span>
+					</div>
+					<div class="car_box">
+						<span class="cart_img"><img src="cart/3.png"></span>
+						<span class="cart_text">品味，高端大气上档次<br/>￥9999元</span>
+						<span class="cart_close">×</span>
+					</div>
+					
+				</div>
+				<div class="car_total">
+					共13件商品 共计￥0.00
+					<button>去购物车</button>
+				</div>
+			</div>
+		</div>
+    </div>
+
+	<!-- 导航区 -->
+	<div class="nav">
+		<ul>
+			<li>数码城</li>
+			<li>天黑黑</li>
+			<li>团购</li>
+			<li>发现</li>
+			<li>二手特价</li>
+			<li>名品汇</li>
+		</ul>
+	</div>
+
+	<!-- banner -->
+	<div class="banner">
+		<!-- 商品分类 -->
+		<!-- 商品标题 -->
+		<div class="goods_title">
+			<div class="title_box">
+		    <img src="icon/18.png">
+			<p>商品分类</p>
+			</div>
+	    </div>
+		<!-- 商品菜单 -->
+		<div class="banner_goods">
+			<div>
+				家用电器
+				<span>></span>
+			</div>
+			<div>
+				手机、运营商、数码
+				<span>></span>
+			</div>
+			<div>
+				电脑、办公
+				<span>></span>
+			</div>
+			<div>
+				家居、家具、家装、厨具
+				<span>></span>
+			</div>
+			<div>
+				男装、女装、童装、内衣
+				<span>></span>
+			</div>
+			<div>
+				化妆、清洁、宠物
+				<span>></span>
+			</div>
+			<div>
+				运动户外、钟表
+				<span>></span>
+			</div>
+			<div>
+				汽车、汽车用品
+				<span>></span>
+			</div>
+			<div>
+				母婴、玩具乐器
+				<span>></span>
+			</div>
+			<div>
+				食品、酒类
+				<span>></span>
+			</div>
+			<div>
+				医疗保健
+				<span>></span>
+			</div>
+			<div>
+				图书、音像、电子书
+				<span>></span>
+			</div>
+		</div>
+		<!-- 商品子菜单 -->
+		<div class="bg_sons">
+			<!-- 商品子菜单1 -->
+			<div class="bg_son bg_son_active">
+				<div class="bg_box_big">
+				<span class="bg_box_title">电器</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电器</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电器</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机修补</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电器</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电器</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电器</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电器</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电器</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+			</div>
+			<!-- 商品子菜单2 -->
+			<div class="bg_son">
+				<div class="bg_box_big">
+				<span class="bg_box_title">手机</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">手机</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">手机</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">手机</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">手机</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">手机</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">手机</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">手机</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+			</div>
+			<!-- 商品子菜单3 -->
+			<div class="bg_son">
+				<div class="bg_box_big">
+				<span class="bg_box_title">电脑</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电脑</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电脑</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电脑</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电脑</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电脑</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电脑</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">电脑</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+			</div>
+			<!-- 商品子菜单4 -->
+			<div class="bg_son">
+				<div class="bg_box_big">
+				<span class="bg_box_title">家具</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">家具</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">家具</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">家具</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">家具</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">家具</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">家具</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">家具</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+			</div>
+			<!-- 商品子菜单5 -->
+			<div class="bg_son">
+				<div class="bg_box_big">
+				<span class="bg_box_title">男女装</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">男女装</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">男女装</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">男女装</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">男女装</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">男女装</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">男女装</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">男女装</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+			</div>
+			<!-- 商品子菜单6 -->
+			<div class="bg_son">
+				<div class="bg_box_big">
+				<span class="bg_box_title">化妆</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">化妆</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">化妆</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">化妆</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">化妆</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">化妆</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">化妆</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">化妆</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+			</div>
+			<!-- 商品子菜单7 -->
+			<div class="bg_son">
+				<div class="bg_box_big">
+				<span class="bg_box_title">户外</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">户外</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">户外</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">户外</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">户外</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">户外</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">户外</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">户外</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+			</div>
+			<!-- 商品子菜单8 -->
+			<div class="bg_son">
+				<div class="bg_box_big">
+				<span class="bg_box_title">汽车</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">汽车</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">汽车</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">汽车</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">汽车</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">汽车</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">汽车</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">汽车</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+			</div>
+			<!-- 商品子菜单9 -->
+			<div class="bg_son">
+				<div class="bg_box_big">
+				<span class="bg_box_title">母婴</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">母婴</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">母婴</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">母婴</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">母婴</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">母婴</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">母婴</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">母婴</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+			</div>
+			<!-- 商品子菜单10 -->
+			<div class="bg_son">
+				<div class="bg_box_big">
+				<span class="bg_box_title">食品</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">食品</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">食品</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">食品</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">食品</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">食品</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">食品</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">食品</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+			</div>
+			<!-- 商品子菜单11 -->
+			<div class="bg_son">
+				<div class="bg_box_big">
+				<span class="bg_box_title">医疗</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">医疗</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">医疗</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">医疗</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">医疗</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">医疗</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">医疗</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">医疗</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+			</div>
+			<!-- 商品子菜单12 -->
+			<div class="bg_son">
+				<div class="bg_box_big">
+				<span class="bg_box_title">图书</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">图书</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">图书</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">图书</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">图书</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">图书</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">图书</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+				<div class="bg_box_big">
+				<span class="bg_box_title">图书</span>
+				<span class="bg_box_line">|</span>
+				<div class="bg_box_sm">
+					<span>手机</span>
+					<span>对讲机</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+					<span>以旧换新</span>
+					<span>手机维修</span>
+				</div>
+				</div>
+			</div>	
+		</div>
+		<!-- 轮播图 -->
+		<div class="banner_imgs">
+			<!-- 轮播图片 -->
+			<div class="img img1 img_active"></div>
+			<div class="img img2"></div>
+			<div class="img img3"></div>
+			<div class="img img4"></div>
+			<div class="img img5"></div>
+			<div class="img img6"></div>
+			<div class="img img7"></div>
+			<!-- 左右切换键 -->
+			<div class="btn btn_left">
+				<img src="imgs/pre2.png">
+			</div>
+			<div class="btn btn_right">
+				<img src="imgs/pre.png">
+			</div>
+			
+			<!-- 圆点切换键 -->
+			<div class="dots">
+				<span class="dot_active"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+
+		<!-- 慕快报 -->
+		<div class="banner_news">
+			<div class="news_top">
+				<span class="news_title">慕快报</span>
+				<span class="news_more">更多&nbsp;></span>
+				<p><span>[特惠]</span>&nbsp;精选图书每满150减50</p>
+				<p><span>[公告]</span>&nbsp;因广州图书仓搬仓升级配送延迟</p>
+				<p><span>[特惠]</span>&nbsp;爆款手机12期免息 抽奖赢电视</p>
+				<p><span>[公告]</span>&nbsp;广东、福建受台风影响配送延迟</p>
+				<p><span>[特惠]</span>&nbsp;大闸蟹领券满399减180</p>
+			</div>
+			<div class="news_middle">
+	            <div>
+					<img src="icon/1.png">
+					<br/>话费
+	            </div>
+		        <div>
+					<img src="icon/2.png">
+					<br/>机票
+		        </div>
+		        <div>
+					<img src="icon/3.png">
+					<br/>电影票
+		        </div>
+		        <div>
+					<img src="icon/4.png">
+					<br/>游戏
+				</div>
+				<div>
+					<img src="icon/5.png">
+					<br/>彩票
+	            </div>
+		        <div>
+					<img src="icon/6.png">
+					<br/>加油卡
+		        </div>
+		        <div>
+					<img src="icon/7.png">
+					<br/>酒店
+		        </div>
+		        <div>
+					<img src="icon/8.png">
+					<br/>火车票
+				</div>
+				<div>
+					<img src="icon/9.png">
+					<br/>众筹 
+	            </div>
+		        <div>
+					<img src="icon/10.png">
+					<br/>理财
+		        </div>
+		        <div>
+					<img src="icon/11.png">
+					<br/>礼品卡
+		        </div>
+		        <div>
+					<img src="icon/12.png">
+					<br/>白条
+				</div>
+			</div>
+			<div class="news_bottom">
+				<img src="ad.png">
+			</div>
+		</div>
+	</div>
+
+	<!-- 楼层区 -->
+	<div class="floor">
+		    <!-- 楼层导航左 -->
+		    <div class="floor_lnav">
+		    	<a href="#F1"><p class="lnav lnav_f1">F1</p></a>
+		    	<a href="#F2"><p class="lnav lnav_f2">F2</p></a>
+		    	<a href="#F3"><p class="lnav lnav_f3">F3</p></a>
+		    	<a href="#F4"><p class="lnav lnav_f4">F4</p></a>
+		    	<a href="#F5"><p class="lnav lnav_f5">F5</p></a>
+		    </div>
+		    <!-- 楼层导航右 -->
+		    <div class="floor_rnav">
+		    	<div class="rnav_box">
+		    		<span class="rnav_text">会员</span>
+		    		<span class="rnav_img"><img src="icon/13.png"></span>
+		    	</div>
+		    	<div class="rnav_box">
+		    		<span class="rnav_text">购物车</span>
+		    		<span class="rnav_img"><img src="icon/14.png"></span>
+		    	</div>
+		    	<div class="rnav_box">
+		    		<span class="rnav_text">我的关注</span>
+		    		<span class="rnav_img"><img src="icon/15.png"></span>
+		    	</div>
+		    	<div class="rnav_box">
+		    		<span class="rnav_text">我的消息</span>
+		    		<span class="rnav_img"><img src="icon/16.png"></span>
+		    	</div>
+		    	<div class="rnav_box">
+		    		<a href="#top"><span class="rnav_text">顶部</span></a>
+		    		<span class="rnav_img"><img src="icon/17.png"></span>
+		    	</div>
+		    </div>
+		    <!-- 1F服装鞋包 -->
+
+			<!-- 楼层标题 -->
+			<a name="F1"></a>
+			<div class="floor_top">
+			    <span class="floor_num">1F</span>
+			    <span class="floor_title">服装鞋包</span>
+			    <ul class="goods_title1">
+					<li class="title_active">
+					    大牌
+					    <img src="floor-arrow.png" class="limg_active">
+				    </li>
+					<li>|</li>
+					<li>
+						男装
+					    <img src="floor-arrow.png"></li>
+					<li>|</li>
+					<li>
+					    女装
+                        <img src="floor-arrow.png">
+					</li>
+			    </ul>
+			</div>
+			<!-- 楼层商品 -->
+            <div class="floor_goods floor1_goods floor_active">
+            	<div class="goods_box">
+            		<img src="floor/1.png">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/1.png">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/1.png">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/1.png">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/1.png">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/1.png">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <div class="floor_goods floor1_goods">
+            	<div class="goods_box">
+            		<img src="floor/0.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/0.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/0.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/0.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/0.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/0.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/0.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/0.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/0.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/0.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/0.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/0.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <div class="floor_goods floor1_goods">
+            	<div class="goods_box">
+            		<img src="floor/5.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/5.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/5.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/5.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/5.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/5.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/5.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/5.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/5.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/5.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/5.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/5.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <!-- 2F个护美妆 -->
+			<!-- 楼层标题 -->
+			<a name="F2"></a>
+			<div class="floor_top">
+			    <span class="floor_num">2F</span>
+
+			    <span class="floor_title">个护美妆</span>
+			    <ul class="goods_title2">
+					<li class="title_active">
+					    热门
+					    <img src="floor-arrow.png" class="limg_active">
+					</li>
+					<li>|</li>
+					<li>
+					    国际大牌
+					    <img src="floor-arrow.png">
+					</li>
+					<li>|</li>
+					<li>
+					    国际名牌
+					    <img src="floor-arrow.png">
+					</li>
+			    </ul>
+			</div>
+			<!-- 楼层商品 -->
+            <div class="floor_goods floor2_goods floor_active">
+            	<div class="goods_box">
+            		<img src="floor/3.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/3.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/3.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/3.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/3.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/3.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/4.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/4.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/4.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/4.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/4.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/4.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <div class="floor_goods floor2_goods">
+            	<div class="goods_box">
+            		<img src="floor/6.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/6.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/6.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/6.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/6.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/6.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/6.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/6.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/6.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/6.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/6.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/6.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <div class="floor_goods floor2_goods">
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/2.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <!-- 3F手机通讯 -->
+			<!-- 楼层标题 -->
+			<a name="F3"></a>
+			<div class="floor_top">
+			    <span class="floor_num">3F</span>
+
+			    <span class="floor_title">手机通讯</span>
+			    <ul class="goods_title3">
+					<li class="title_active">
+					    热门
+					    <img src="floor-arrow.png" class="limg_active">
+					</li>
+					<li>|</li>
+					<li>
+					    品质优选
+					    <img src="floor-arrow.png">
+					</li>
+					<li>|</li>
+					<li>
+					    新机尝鲜
+					    <img src="floor-arrow.png">
+					</li>
+			    </ul>
+			</div>
+			<!-- 楼层商品 -->
+            <div class="floor_goods floor3_goods floor_active">
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <div class="floor_goods floor3_goods">
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <div class="floor_goods floor3_goods">
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <!-- 4F家用电器 -->
+			<!-- 楼层标题 -->
+			<a name="F4"></a>
+			<div class="floor_top">
+			    <span class="floor_num">4F</span>
+
+			    <span class="floor_title">家用电器</span>
+			    <ul class="goods_title4">
+					<li class="title_active">
+					    热门
+					    <img src="floor-arrow.png" class="limg_active">
+					</li>
+					<li>|</li>
+					<li>
+					    大家电
+					    <img src="floor-arrow.png">
+					</li>
+					<li>|</li>
+					<li>
+					    生活电器
+					    <img src="floor-arrow.png">
+					</li>
+			    </ul>
+			</div>
+			<!-- 楼层商品 -->
+            <div class="floor_goods floor4_goods floor_active">
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <div class="floor_goods floor4_goods">
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/7.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <div class="floor_goods floor4_goods">
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <!-- 5F电脑数码 -->
+			<!-- 楼层标题 -->
+			<a name="F5"></a>
+			<div class="floor_top">
+			    <span class="floor_num">5F</span>
+
+			    <span class="floor_title">电脑数码</span>
+			    <ul class="goods_title5">
+					<li class="title_active">
+					    热门
+					    <img src="floor-arrow.png" class="limg_active">
+					</li>
+					<li>|</li>
+					<li> 
+						<img src="floor-arrow.png">
+					    电脑平板
+					</li>
+					<li>|</li>
+					<li>
+					    潮流影音
+					    <img src="floor-arrow.png">
+				    </li>
+			    </ul>
+			</div>
+			<!-- 楼层商品 -->
+            <div class="floor_goods floor5_goods floor_active">
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/9.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <div class="floor_goods floor5_goods">
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+            <div class="floor_goods floor5_goods">
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            	<div class="goods_box">
+            		<img src="floor/8-1.jpg">
+            		<p>匡威男棒球开衫外套2018</p>
+            		<p class="price">￥479</p>
+            	</div>
+            </div>
+	</div>
+
+	<!-- 友情链接 -->
+	<div class="info">
+		<span class="info_box">
+			<p>消费者保障</p>
+			<p>
+				<span><a href="#">保障范围</a></span>
+				<span><a href="#">退货退款流程</a></span>
+				<span><a href="#">服务中心</a></span>
+			</p>
+			<p><span><a href="#">更多特色服务</a></span></p>
+		</span>
+		<span class="info_box">
+			<p>新手上路</p>
+			<p>
+				<span><a href="#">新手专区</a></span>
+				<span><a href="#">消费警示</a></span>
+				<span><a href="#">交易安全</a></span>
+			</p>
+			<p>
+				<span><a href="#">24小时在线帮助</a></span>
+				<span><a href="#">免费开店</a></span>
+			</p>
+		</span>
+		<span class="info_box">
+			<p>付款方式</p>
+			<p>
+				<span><a href="#">快捷支付</a></span>
+				<span><a href="#">信用卡</a></span>
+				<span><a href="#">余额宝</a></span>
+				<span><a href="#">蜜蜂花呗</a></span>
+			</p>
+			<p><span><a href="#">更多特色服务</a></span></p>
+		</span>
+		<span class="info_box">
+			<p>慕淘特色</p>
+			<p>
+				<span><a href="#">手机慕淘</a></span>
+				<span><a href="#">慕淘信</a></span>
+				<span><a href="#">大众评审</a></span>
+				<span><a href="#">B格指南</a></span>
+			</p>
+			<p>&nbsp;</p>
+		</span>
+	</div>
+
+	<!-- foot -->
+	<div class="foot">
+		<span>关于慕淘</span>
+		<span>合作伙伴</span>
+		<span>营销中心</span>
+		<span>廉政举报</span>
+		<span>联系客服</span>
+		<span>开放平台</span>
+		<span>诚征英才</span>
+		<span>联系我们</span>
+		<span>网站地图</span>
+		<span>法律声明</span>
+		<span>知识产权</span>
+		<p>@ 2018 imooc.com All Rights Reserve</p></a>
+	</div>
+
+	</div>
+</body>
+</html>
